@@ -1,0 +1,11 @@
+c:\users\ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\bin\Debug\netcoreapp2.0\ProductoInvent.deps.json
+c:\users\ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\bin\Debug\netcoreapp2.0\ProductoInvent.runtimeconfig.json
+c:\users\ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\bin\Debug\netcoreapp2.0\ProductoInvent.runtimeconfig.dev.json
+c:\users\ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\bin\Debug\netcoreapp2.0\ProductoInvent.dll
+c:\users\ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\bin\Debug\netcoreapp2.0\ProductoInvent.pdb
+c:\users\ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\obj\Debug\netcoreapp2.0\ProductoInvent.csprojAssemblyReference.cache
+c:\users\ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\obj\Debug\netcoreapp2.0\ProductoInvent.csproj.CoreCompileInputs.cache
+c:\users\ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\obj\Debug\netcoreapp2.0\ProductoInvent.AssemblyInfoInputs.cache
+c:\users\ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\obj\Debug\netcoreapp2.0\ProductoInvent.AssemblyInfo.cs
+c:\users\ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\obj\Debug\netcoreapp2.0\ProductoInvent.dll
+c:\users\ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\obj\Debug\netcoreapp2.0\ProductoInvent.pdb

@@ -1,0 +1,17 @@
+C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=ProductoInvent
+--content-root=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\Home\About.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\Home\Contact.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\Home\Index.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\ProductInvent\AddProduct.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\ProductInvent\DeleteProduct.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\ProductInvent\EditProduct.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\ProductInvent\Index.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\ProductInvent\ProductDetails.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\Shared\Error.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\Shared\_Layout.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\_ViewImports.cshtml
+--file=C:\Users\Ganesanpr.dv\source\repos\ProductoInvent\ProductoInvent\Views\_ViewStart.cshtml
