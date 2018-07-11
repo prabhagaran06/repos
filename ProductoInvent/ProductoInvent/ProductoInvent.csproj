@@ -6,7 +6,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.Azure.KeyVault" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Azure.KeyVault.Core" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="Sendgrid" Version="9.9.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,6 +18,12 @@
 
   <ItemGroup>
     <None Include="wwwroot\images\productscartimage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web">
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_64\System.Web\2.0.0.0__b03f5f7f11d50a3a\System.Web.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

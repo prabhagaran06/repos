@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Web;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductoInvent.Models;
+using ProductoInvent.Shared;
+using System.IO;
 
 namespace ProductoInvent
 {
@@ -10,10 +13,13 @@ namespace ProductoInvent
     {
         
         private ProductoInventRepository productoInventRepository;
-
+        private AzureStorageBlob azureBlobStorage;
+        private SendEmailLogic sendEmailLogic;
         public ProductInventController()
         {
             productoInventRepository = new ProductoInventRepository();
+            azureBlobStorage = new AzureStorageBlob();
+            sendEmailLogic = new SendEmailLogic();
         }
         // GET: ProductInvent
         public ActionResult Index()
@@ -26,6 +32,7 @@ namespace ProductoInvent
         public ActionResult Details(int id)
         {
             var productcollectionmodel = productoInventRepository.GetProductDetails(id);
+            productcollectionmodel.ProductImage = azureBlobStorage.DownloadFromBlob(productcollectionmodel.FileName).Result;
             return View("ProductDetails",productcollectionmodel);
         }
 
@@ -36,14 +43,29 @@ namespace ProductoInvent
         }
 
         // POST: ProductInvent/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpPost]        
         public ActionResult AddProduct(ProductCollectionModel collection)
         {
             try
             {
                 // TODO: Add insert logic here
+                if (Request.Form.Files.Count > 0)
+                {
+                    var file = Request.Form.Files[0];
+                    byte[] buffer = new byte[file.Length];
+                    file.OpenReadStream().Read(buffer, 0, (int)file.Length);
+                    collection.FileName = file.FileName;
+                    collection.ProductImage = buffer;
+                    azureBlobStorage.UploadToBlobAsync(collection);
+                }
+                else
+                {
+                    collection.FileName = "NoImage.png";
+                }
+                
+               
                 productoInventRepository.AddNewProduct(collection);
+                sendEmailLogic.SendMail(collection);
                 return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)
@@ -56,18 +78,28 @@ namespace ProductoInvent
         public ActionResult Edit(int id)
         {
             var productcollectionmodel=productoInventRepository.GetProductDetails(id);
+            productcollectionmodel.ProductImage = azureBlobStorage.DownloadFromBlob(productcollectionmodel.FileName).Result;
             return View("EditProduct", productcollectionmodel);
         }
 
         // POST: ProductInvent/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, ProductCollectionModel collection)
+        [HttpPost]        
+        public ActionResult EditProduct(ProductCollectionModel collection)
         {
             try
             {
-                // TODO: Add update logic here
-
+                
+                
+                if (Request.Form.Files.Count>0)
+                {
+                    var file = Request.Form.Files[0];
+                    byte[] buffer = new byte[file.Length];
+                    file.OpenReadStream().Read(buffer, 0, (int)file.Length);
+                    collection.FileName = file.FileName;
+                    collection.ProductImage = buffer;
+                    azureBlobStorage.UploadToBlobAsync(collection);
+                }
+                productoInventRepository.EditProduct(collection);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -80,17 +112,16 @@ namespace ProductoInvent
         public ActionResult Delete(int id)
         {
             var productcollectionmodel = productoInventRepository.GetProductDetails(id);
+            productcollectionmodel.ProductImage = azureBlobStorage.DownloadFromBlob(productcollectionmodel.FileName).Result;
             return View("DeleteProduct", productcollectionmodel);
         }
 
-        // POST: ProductInvent/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        
+        [HttpPost]        
         public ActionResult DeleteProduct(int id, ProductCollectionModel collection)
         {
             try
-            {
-                // TODO: Add delete logic here
+            {                
                 productoInventRepository.DeleteProduct(collection.ProductId);
                 return RedirectToAction(nameof(Index));
             }

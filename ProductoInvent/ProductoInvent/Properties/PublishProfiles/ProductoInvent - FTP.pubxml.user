@@ -22,11 +22,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="dotnet-aspnet-codegenerator-design.dll">
       <publishTime>02/20/2018 20:41:26</publishTime>
     </File>
+    <File Include="Microsoft.Azure.KeyVault.Core.dll">
+      <publishTime>06/28/2018 21:50:56</publishTime>
+    </File>
+    <File Include="Microsoft.Azure.KeyVault.dll">
+      <publishTime>06/28/2018 22:46:20</publishTime>
+    </File>
+    <File Include="Microsoft.Azure.KeyVault.WebKey.dll">
+      <publishTime>06/28/2018 22:19:18</publishTime>
+    </File>
     <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
       <publishTime>06/20/2018 07:55:10</publishTime>
     </File>
     <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
       <publishTime>06/20/2018 07:55:16</publishTime>
+    </File>
+    <File Include="Microsoft.Rest.ClientRuntime.Azure.dll">
+      <publishTime>03/23/2018 20:50:56</publishTime>
+    </File>
+    <File Include="Microsoft.Rest.ClientRuntime.dll">
+      <publishTime>03/23/2018 20:51:04</publishTime>
     </File>
     <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll">
       <publishTime>02/20/2018 20:41:26</publishTime>
@@ -53,22 +68,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/20/2018 07:55:09</publishTime>
     </File>
     <File Include="ProductoInvent.deps.json">
-      <publishTime>06/27/2018 12:35:13</publishTime>
+      <publishTime>07/11/2018 07:02:03</publishTime>
     </File>
     <File Include="ProductoInvent.dll">
-      <publishTime>06/27/2018 12:32:36</publishTime>
+      <publishTime>07/11/2018 07:01:55</publishTime>
     </File>
     <File Include="ProductoInvent.pdb">
-      <publishTime>06/27/2018 12:32:36</publishTime>
+      <publishTime>07/11/2018 07:01:55</publishTime>
     </File>
     <File Include="ProductoInvent.PrecompiledViews.dll">
-      <publishTime>06/27/2018 12:32:45</publishTime>
+      <publishTime>07/11/2018 07:02:02</publishTime>
     </File>
     <File Include="ProductoInvent.PrecompiledViews.pdb">
-      <publishTime>06/27/2018 12:32:45</publishTime>
+      <publishTime>07/11/2018 07:02:02</publishTime>
     </File>
     <File Include="ProductoInvent.runtimeconfig.json">
-      <publishTime>06/27/2018 12:35:13</publishTime>
+      <publishTime>07/11/2018 07:02:03</publishTime>
+    </File>
+    <File Include="SendGrid.dll">
+      <publishTime>08/22/2017 12:14:28</publishTime>
     </File>
     <File Include="System.Composition.AttributedModel.dll">
       <publishTime>06/20/2018 07:55:31</publishTime>
@@ -86,7 +104,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/20/2018 07:55:09</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>06/27/2018 12:35:13</publishTime>
+      <publishTime>07/11/2018 07:02:03</publishTime>
     </File>
     <File Include="wwwroot/css/site.css">
       <publishTime>06/20/2018 10:00:59</publishTime>

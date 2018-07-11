@@ -60,5 +60,11 @@ namespace ProductoInvent.Models
         [DisplayName("Product Number")]
         [DisplayFormat(NullDisplayText = "NA")]
         public string ProductNumber { get; set; }
+
+        public string FileName { get; set; }
+
+        [DisplayName("E-Mail")]
+        [DisplayFormat(NullDisplayText = "NA")]
+        public string CustomerEmail { get; set; }
     }
 }
